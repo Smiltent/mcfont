@@ -3,5 +3,5 @@
 <img src="_header.png">
 
 
-
+Fonts obtained from [Datapack Hub's Text Generator](https://github.com/Datapack-Hub/text).
 NOT AN OFFICIAL MINECRAFT SERVICE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT

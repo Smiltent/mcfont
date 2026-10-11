@@ -1,0 +1,15 @@
+
+text {
+    font-family: MC, monospace;
+    font-size: var(--s);
+    font-kerning: none;
+    white-space: pre;
+}
+
+.b { font-family: MCB, MC, monospace }
+.o { animation: o var(--od) infinite; }
+
+@keyframes o {
+    0%, 16.6%   { opacity: 1; }
+    16.7%, 100% { opacity: 0; }
+}
