@@ -14,11 +14,91 @@
 </head>
 <body>
     <h1>MCFont</h1>
+    <p>a Simple way to display Minecraft Text on your GitHub profile.</p>
+    <details>
+        <summary>Code reference</summary>
+        <table>
+            <tr>
+                <td><code>&0</code> - <code>&f</code></td>
+                <td>Minecraft Colors</td>
+            </tr>
+            <tr>
+                <td><code>&#ff0000</code></td>
+                <td>Custom HEX Colors</td>
+            </tr>
+            <tr>
+                <td><code>&l</code></td>
+                <td>Bold</td>
+            </tr>
+            <tr>
+                <td><code>&o</code></td>
+                <td>Italic</td>
+            </tr>
+            <tr>
+                <td><code>&n</code></td>
+                <td>Underline</td>
+            </tr>
+            <tr>
+                <td><code>&m</code></td>
+                <td>Strikethrough</td>
+            </tr>
+            <tr>
+                <td><code>&k</code></td>
+                <td>Obfuscated</td>
+            </tr>
+            <tr>
+                <td><code>&s</code> / <code>&s#ff0000</code></td>
+                <td>Shadow, optionally with a color</td>
+            </tr>
+            <tr>
+                <td><code>&g</code> / <code>&g#ff0000</code></td>
+                <td>Glow, optionally with a color</td>
+            </tr>
+            <tr>
+                <td><code>&r</code></td>
+                <td>Reset</td>
+            </tr>
+            <tr>
+                <td><code>&&</code></td>
+                <td>a Literal & symbol</td>
+            </tr>
+            <tr>
+                <td><code>\n</code></td>
+                <td>New line</td>
+            </tr>
+        </table>
+    </details>
+
+
+    <div class="tools">
+
+    </div>
+
+    <div class="colors">
+
+    </div>
 
     <textarea name="text" id="text" placeholder="Hello, world!"></textarea>
-    <p id="url"></p>
 
-    <span></span>
-    <img src="" id="preview">
+    <div class="output">
+        <img src="" alt="" id="imgOutput">
+    </div>
+
+    <div class="outputs">
+        <div>
+            <input type="text" id="url" readonly>
+            <button>Copy</button>
+        </div>
+        <div>
+            <input type="text" id="md" readonly>
+            <button>Copy</button>
+        </div>
+        <div>
+            <input type="text" id="html" readonly>
+            <button>Copy</button>
+        </div>
+    </div>
+
+    <p>NOT AN OFFICIAL MINECRAFT SERVICE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT</p>
 </body>
 </html>

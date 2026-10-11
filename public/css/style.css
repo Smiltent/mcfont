@@ -4,7 +4,22 @@
     margin: 0;
 }
 
+:root {
+    --text: #ffffff;
+    --bg: #0d1117;
+}
+
 body {
     padding: 1rem;
     font-family: Roboto, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+input, textarea {
+    background: var(--bg);
+    color: var(--text);
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+    border: 1px solid color-mix(in srgb, var(--text) 25%, transparent)
 }

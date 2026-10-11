@@ -142,10 +142,6 @@ export function renderSvg(input: string, opts: RenderOpts = {}) {
     const u = Math.min(10, Math.max(1, Math.round(opts.scale ?? 3)))
     const lines = parse(input)
 
-    // const widest = Math.max(...lines.map((l) => [...l].reduce((w, ch) => w + glyphWidth(ch.codePointAt(0)!), 0)), 1)
-
-    // const width = (widest + 6) * u
-    const width = 6 * u 
     const height = (lines.length * LINE_H + 4) * u
 
     const text = lines
@@ -163,7 +159,8 @@ export function renderSvg(input: string, opts: RenderOpts = {}) {
         CSS
 
     return (
-        `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${label}">` +
+        // `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${label}">` +
+        `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve" height="${height}" role="img" aria-label="${label}">` +
         `<title>${label}</title><style>${css}</style>` +
         `${text}</svg>`
     )
