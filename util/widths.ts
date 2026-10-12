@@ -1,5 +1,5 @@
 
-import fontkit from "fontkit"
+import * as fontkit from "fontkit"
 import path from "node:path"
 import fs from "node:fs"
 
