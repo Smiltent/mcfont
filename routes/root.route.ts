@@ -1,8 +1,8 @@
 
+import { renderSvg } from "../src/Renderer.ts"
 import decode from "../util/decode.ts"
 import Honoo from "../src/Hono.ts"
 import { Hono } from "hono"
-import { renderSvg } from "../src/Renderer.ts";
 
 const api = new Hono()
 const MAX = 2000

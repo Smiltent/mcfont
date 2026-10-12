@@ -6,10 +6,13 @@ text {
     white-space: pre;
 }
 
+.d { fill: #1f2328 }
+.ds { fill: #b1b8c0 }
+
 .b { font-family: MCB, MC, monospace }
 .o { animation: o var(--od) infinite; }
 
-@keyframes o {
-    0%, 16.6%   { opacity: 1; }
-    16.7%, 100% { opacity: 0; }
+@media (prefers-color-scheme: dark) {
+    .d { fill: #fff }
+    .ds { fill: #3f3f3f }
 }
