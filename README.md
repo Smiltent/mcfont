@@ -14,6 +14,13 @@ Here's an example:
 # AI Usage
 AI was used to help with font rendering & tab completes. 
 
+# Setup
+You must have Deno runtime installed, then you can do:
+```
+deno run start
+```
+The server will be active on `http://localhost:3000`!
+
 # License & Misc
 [LICENSE](LICENSE)  
 Fonts obtained from [Datapack Hub's Text Generator](https://github.com/Datapack-Hub/text)  
