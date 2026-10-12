@@ -16,10 +16,11 @@ body {
     color: var(--text);
 }
 
-input, textarea {
-    background: var(--bg);
-    color: var(--text);
+input, textarea, button {
+    background: transparent;
+    color: inherit;
     border-radius: 0.25rem;
     padding: 0.25rem;
-    border: 1px solid color-mix(in srgb, var(--text) 25%, transparent)
+    border: 1px solid color-mix(in srgb, var(--text) 25%, transparent);
+    padding: 0.35rem 0.6rem;
 }
