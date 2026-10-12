@@ -33,8 +33,8 @@ function update() {
 
     imgOutput.src = `/view?${q}`
     urlOutput.value = full
-    mdOutput.value = `![MCFont](${full})`
-    HTMLOutput.value = `<img src="${full.replaceAll("&", "&amp;")}" alt="MCFont">`
+    mdOutput.value = `![MCFont.com](${full})`
+    HTMLOutput.value = `<img src="${full.replaceAll("&", "&amp;")}" alt="MCFont.com">`
 }
 
 let timer
@@ -56,7 +56,7 @@ function insert(code) {
 for (const [key, hex] of Object.entries(PALLETE)) {
     const btn = document.createElement("button")
 
-    btn.innerText = `&${key}`
+    btn.label = `&${key}`
     btn.dataset.code = `&${key}`
     btn.style.background = hex
 
@@ -89,6 +89,8 @@ document.addEventListener("click", (e) => {
             t.textContent = old
         }, 1000)
     }
+
+    if (t.id === "bg") document.querySelector(".output").classList.toggle("dark")
 })
 
 for (const el of [input, scale]) {
@@ -96,7 +98,7 @@ for (const el of [input, scale]) {
 }
 
 for (const el of [urlOutput, mdOutput, HTMLOutput]) {
-    el.addEventListener("focus", () => f.select())
+    el.addEventListener("focus", () => el.select())
 }
 
 update()

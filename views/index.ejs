@@ -13,90 +13,99 @@
     <link rel="stylesheet" href="/public/css/style.css">
 </head>
 <body>
-    <h1>MCFont</h1>
-    <p>a Simple way to display Minecraft Text on your GitHub profile.</p>
-    <details>
-        <summary>Code reference</summary>
-        <table>
-            <tr>
-                <td><code>&0</code> - <code>&f</code></td>
-                <td>Minecraft Colors</td>
-            </tr>
-            <tr>
-                <td><code>&#ff0000</code></td>
-                <td>Custom HEX Colors</td>
-            </tr>
-            <tr>
-                <td><code>&l</code></td>
-                <td>Bold</td>
-            </tr>
-            <tr>
-                <td><code>&o</code></td>
-                <td>Italic</td>
-            </tr>
-            <tr>
-                <td><code>&n</code></td>
-                <td>Underline</td>
-            </tr>
-            <tr>
-                <td><code>&m</code></td>
-                <td>Strikethrough</td>
-            </tr>
-            <tr>
-                <td><code>&k</code></td>
-                <td>Obfuscated</td>
-            </tr>
-            <tr>
-                <td><code>&s</code> / <code>&s#ff0000</code></td>
-                <td>Shadow, optionally with a color</td>
-            </tr>
-            <tr>
-                <td><code>&g</code> / <code>&g#ff0000</code></td>
-                <td>Glow, optionally with a color</td>
-            </tr>
-            <tr>
-                <td><code>&r</code></td>
-                <td>Reset</td>
-            </tr>
-            <tr>
-                <td><code>&&</code></td>
-                <td>a Literal & symbol</td>
-            </tr>
-            <tr>
-                <td><code>\n</code></td>
-                <td>New line</td>
-            </tr>
-        </table>
-    </details>
+    <div class="container">
+        <h1>MCFont</h1>
+        <p class="tiny">a Simple way to display Minecraft Text on your GitHub profile or Website!</p>
+        <details>
+            <summary>Code reference</summary>
+            <table>
+                <tr>
+                    <td><code>&0</code> - <code>&f</code></td>
+                    <td>Minecraft Colors</td>
+                </tr>
+                <tr>
+                    <td><code>&#ff0000</code></td>
+                    <td>Custom HEX Colors</td>
+                </tr>
+                <tr>
+                    <td><code>&l</code></td>
+                    <td>Bold</td>
+                </tr>
+                <tr>
+                    <td><code>&o</code></td>
+                    <td>Italic</td>
+                </tr>
+                <tr>
+                    <td><code>&n</code></td>
+                    <td>Underline</td>
+                </tr>
+                <tr>
+                    <td><code>&m</code></td>
+                    <td>Strikethrough</td>
+                </tr>
+                <tr>
+                    <td><code>&k</code></td>
+                    <td>Obfuscated</td>
+                </tr>
+                <tr>
+                    <td><code>&s</code> / <code>&s#ff0000</code></td>
+                    <td>Shadow, optionally with a color</td>
+                </tr>
+                <tr>
+                    <td><code>&g</code> / <code>&g#ff0000</code></td>
+                    <td>Glow, optionally with a color</td>
+                </tr>
+                <tr>
+                    <td><code>&r</code></td>
+                    <td>Reset</td>
+                </tr>
+                <tr>
+                    <td><code>&&</code></td>
+                    <td>a Literal & symbol</td>
+                </tr>
+                <tr>
+                    <td><code>\n</code></td>
+                    <td>New line</td>
+                </tr>
+            </table>
+        </details>
 
-    <div id="tools" class="tools"></div>
-    <div id="colors" class="colors"></div>
+        <div id="tools" class="tools"></div>
+        <div id="colors" class="colors"></div>
 
-    <textarea id="input" placeholder="Hello, world!"></textarea>
+        <textarea id="input" placeholder="Hello, world!" rows="3" spellcheck="false">Hello, world!</textarea>
 
-    <input type="number" id="scale">
-
-    <div class="output">
-        <img src="" alt="" id="imgOutput">
-    </div>
-
-    <div class="outputs">
         <div>
+            <label>
+                Scale
+                <input type="number" id="scale" value="3" min="1" max="10">
+            </label>
+            <button type="button" id="bg">Toggle background</button>
+        </div>
+
+        <div class="output">
+            <img src="" alt="" id="imgOutput">
+        </div>
+
+        <div class="out">
+            <span>URL</span>
             <input type="text" id="outUrl" readonly>
-            <button>Copy</button>
+            <button data-copy="outUrl">Copy</button>
         </div>
-        <div>
+        <div class="out">
+            <span>Markdown</span>
             <input type="text" id="outMd" readonly>
-            <button>Copy</button>
+            <button data-copy="outMd">Copy</button>
         </div>
-        <div>
+        <div class="out">
+            <span>HTML</span>
             <input type="text" id="outHTML" readonly>
-            <button>Copy</button>
+            <button data-copy="outHTML">Copy</button>
         </div>
+
+        <p class="tiny footer">NOT AN OFFICIAL MINECRAFT SERVICE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT</p>
+
+        <script src="/public/js/script.js"></script>
     </div>
-
-    <p>NOT AN OFFICIAL MINECRAFT SERVICE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT</p>
-
-    <script src="/public/js/script.js"></script>
 </body>
 </html>

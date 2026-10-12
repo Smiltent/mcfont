@@ -2,11 +2,15 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 :root {
     --text: #ffffff;
     --bg: #0d1117;
+
+    --dark: color-mix(in srgb, var(--text) 75%, transparent);
+    --line: color-mix(in srgb, var(--text) 25%, transparent);
 }
 
 body {
@@ -16,11 +20,101 @@ body {
     color: var(--text);
 }
 
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+    display: grid;
+    gap: 0.75rem
+}
+
 input, textarea, button {
     background: transparent;
     color: inherit;
     border-radius: 0.25rem;
     padding: 0.25rem;
-    border: 1px solid color-mix(in srgb, var(--text) 25%, transparent);
+    border: 1px solid var(--line);
     padding: 0.35rem 0.6rem;
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+    font-family: monospace;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    border-color: greenyellow;
+}
+
+#colors button {
+    width: 1.6rem;
+    height: 1.6rem;
+    padding: 0;
+}
+
+.output {
+    min-height: 6rem;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+
+    overflow: auto;
+    background-color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+}
+
+.output.dark {
+    background-color: var(--bg);
+}
+
+.out {
+    display: grid;
+    grid-template-columns: 5rem 1fr auto;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.outputs input {
+    min-width: 0;
+    font-size: 0.85rem
+}
+
+details {
+    font-size: 0.9rem;
+}
+
+summary {
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+td {
+    padding: 0.2rem 1rem 0.2rem 0;
+    vertical-align: top;
+}
+
+code {
+    font-family: monospace;
+    background-color: var(--line);
+    padding: 0 0.25rem;
+    border-radius: 3px;
+}
+
+.tiny {
+    color: var(--dark);
+    font-size: 0.9rem
+}
+
+.footer {
+    padding-top: 2rem;
+    text-align: center;
 }
