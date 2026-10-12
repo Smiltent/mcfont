@@ -217,10 +217,12 @@ export function renderSvg(input: string, opts: RenderOpts = {}) {
         maxX = Math.max(maxX, x)
     })
 
-    const padX = 3 * u
-    const padY = 2 * u
-    const width = Math.max(maxX, u) + padX * 2
-    const height = lines.length * LINE_H * u + padY * 2
+    const padX = u
+    const padY = u
+    const padR = (runs.some((r) => r.style.italic) ? 2 : 1) * u
+
+    const width = Math.max(maxX, u) + padX + padR
+    const height = ((lines.length - 1) * LINE_H + BASELINE + 2) * u + padY * 2
 
     // helper scripts
     const n = (v: number) => +v.toFixed(2)
